@@ -1,0 +1,53 @@
+{
+  "name": "dsh-todo-panel",
+  "version": "0.3.1",
+  "description": "面向 ADHD 用户、帮助克服工作启动困难的 DeepSeek Harness 任务台插件。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar-right"
+      ],
+      "platform": "web"
+    }
+  },
+  "license": "MIT",
+  "author": "lyle-alpha-sun",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lyle-alpha-sun/dsh-todo-panel.git"
+  },
+  "homepage": "https://github.com/lyle-alpha-sun/dsh-todo-panel#readme",
+  "bugs": {
+    "url": "https://github.com/lyle-alpha-sun/dsh-todo-panel/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "adhd",
+    "task-initiation",
+    "todo",
+    "executive-function"
+  ],
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "build": "node scripts/build-client.mjs",
+    "test": "node scripts/test.mjs",
+    "check": "node --check lib/index.js && node --check lib/client.js && node --check lib/model.js"
+  }
+}

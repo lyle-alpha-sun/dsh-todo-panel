@@ -1,0 +1,4 @@
+check*.mjs
+scripts/
+.github/
+.gitignore

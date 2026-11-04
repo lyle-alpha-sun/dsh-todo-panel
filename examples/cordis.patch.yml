@@ -1,0 +1,7 @@
+# Add this override to your DSH profile only if you want agent messages.
+- id: dsh-todo-panel
+  config:
+    notify: true
+    notifySession: YOUR_SESSION_ID
+    # dataFile: ~/my-task-board/tasks.json
+    # nudgeCooldownMs: 2700000

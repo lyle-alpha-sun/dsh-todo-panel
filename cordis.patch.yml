@@ -1,0 +1,7 @@
+# Local-first defaults. Enable agent reminders explicitly in your profile.
+- insert:
+    - id: dsh-todo-panel
+      name: dsh-todo-panel
+      config:
+        enabled: true
+        notify: false
